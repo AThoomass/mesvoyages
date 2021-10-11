@@ -47,6 +47,11 @@ class Visite
      */
     private $tempmax;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $note;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +125,18 @@ class Visite
     public function setTempmax(?int $tempmax): self
     {
         $this->tempmax = $tempmax;
+
+        return $this;
+    }
+
+    public function getNote(): ?int
+    {
+        return $this->note;
+    }
+
+    public function setNote(?int $note): self
+    {
+        $this->note = $note;
 
         return $this;
     }
