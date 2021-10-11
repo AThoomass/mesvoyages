@@ -140,4 +140,8 @@ class Visite
 
         return $this;
     }
+    
+    public function getDatecreationString() : string{
+        return $this->datecreation->format('d/m/Y');
+    }
 }
